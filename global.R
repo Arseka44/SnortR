@@ -10,7 +10,7 @@ library(jsonlite)
 library(tidyr)
 library(dplyr)
 library(iptools)
-library(crafter)
+#library(crafter)
 library(DT)
 # -----------------------------------------------------------
 # read sample traffic from local drive 

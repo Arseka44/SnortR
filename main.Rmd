@@ -1,0 +1,15 @@
+---
+title: "Main"
+author: "Aleksander Petrovskii"
+date: "July 2, 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Моделирование основных решений
+В данном документе будет производится макетирование основных решений дипломной работы. Рабочий вариант будет реализован в виде программы на Shiny R.
+
+
