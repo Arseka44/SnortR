@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Первое - структурируем "сырой" pcap и отфильтруем нужные поля
 
-```{bash}
+```{bash echo = TRUE}
 #!/bin/sh
 if [ $# -ne 2 ]
 then
@@ -28,5 +28,27 @@ tshark -r $1 -Tfields -E separator=, -E header=y -E quote=d -e frame.number -e f
 fi
 
 ```
+
+## Choose the file
+
+```{r echo=TRUE}
+#set path to file with traffic dump`s
+knitr::opts_knit$set(root.dir = '/home/petr0vsk/WorkR/SnortR/2009_CDX_Datasets/')
+all.files <- list.files('2009_CDX_Datasets')
+#convert files from pcap to table
+if ( length(all.files) > 0 ) {
+  for(i in 1:length(all.files)){
+    print(all.files[i])
+    
+  }
+  
+} else { # if ifles not exist`s find pcap manyaly
+  print("Can`t find file for processing, please choose it manualy")
+  file.choose(new = FALSE)
+}
+  
+
+```
+
 
 
