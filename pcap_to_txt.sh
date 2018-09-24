@@ -1,4 +1,6 @@
 #!/bin/sh
+# конвертирование трафика из pcap файла в ascii с помощью утилиты tshark
+# при запуске скрипта указывается два аргумента имя исходного pcap-файла и имя целевого файла
 if [ $# -ne 2 ]
 then
 	echo "Let's try: pcap_to_txt.sh from_file.pcap to_file.txt "
